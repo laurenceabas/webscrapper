@@ -14,7 +14,7 @@ namespace Models
 
 		public string Description { get; set; }
 
-		public string EventName { get; set; }
+		public string ConstantName { get; set; }
 
 		public IList<InnerLink> InnerLinks { get; set; }
 	}

@@ -1,0 +1,1 @@
+﻿INSERT INTO WebTargets VALUES('Hamilton', 'https://hamilton.shnsf.com', 'For Hamilton show', 'hamilton');

@@ -4,14 +4,16 @@ using Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Database.Migrations
 {
     [DbContext(typeof(WebScrapperContext))]
-    partial class WebScrapperContextModelSnapshot : ModelSnapshot
+    [Migration("20190905180408_AddColumnElementName")]
+    partial class AddColumnElementName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,21 +27,13 @@ namespace Database.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("AttributeName");
-
                     b.Property<string>("ElementName");
-
-                    b.Property<bool>("IsCssClass");
-
-                    b.Property<bool>("IsTagName");
-
-                    b.Property<bool>("IsXPath");
-
-                    b.Property<string>("Locator");
 
                     b.Property<string>("Url");
 
                     b.Property<int?>("WebTargetId");
+
+                    b.Property<string>("XPath");
 
                     b.HasKey("Id");
 

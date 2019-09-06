@@ -14,6 +14,16 @@ namespace Models
 
 		public string Url { get; set; }
 
-		public string XPath { get; set; }
+		public string Locator { get; set; }
+
+		public bool IsXPath { get; set; }
+
+		public bool IsCssClass { get; set; }
+
+		public bool IsTagName { get; set; }
+
+		public string AttributeName { get; set; }
+
+		public string ElementName { get; set; }
 	}
 }
